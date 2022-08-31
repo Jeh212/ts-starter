@@ -1,9 +1,17 @@
-# TS-STARTER
+# Start the project
 
-Simple starter project for typescript
+    `docker-compose up`
 
-If you need to wait on other services to start you can use in the docker file:
+# URL
 
-```
-CMD [ "./wait.sh" , "lcoalhost:3000", "--", "node", "index.js" ]
-```
+    `localhost:3000/rates/convert`
+
+# Request BODY
+
+    #### GET
+    `{
+    "amountValue": 1000,
+    "fromRate": "BRL",
+    "toRate":"EUR"
+
+}`
