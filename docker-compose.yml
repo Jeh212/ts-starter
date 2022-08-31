@@ -1,0 +1,20 @@
+version: '3.7'
+
+services:
+  currency:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: currency
+    ports:
+      - 3000:3001
+    volumes:
+      - ./:/usr/app
+    env_file:
+      - ./.env
+    networks: 
+      - currency-network
+
+networks: 
+    currency-network:
+        driver: bridge
